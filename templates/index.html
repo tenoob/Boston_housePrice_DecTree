@@ -1,0 +1,58 @@
+<html>
+
+
+<title>House Price at Boston 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<div class="content">
+    <h1 style="text-align: center">House Price at Boston Prediction
+    </h1>
+
+    <div class="form">
+        <form action="/result" method="POST" >
+
+            <label for="crim">per capita crime</label>
+            <input type="number" id="crim" name="crim" min="0.0" step="any">
+
+            <label for="indus">proportion of non-retail business acres per town</label>
+            <input type="number" id="indus" name="indus"min="0.0" step="any">
+
+            <label for="nox">nitric oxides concentration (parts per 10 million)</label>
+            <input type="number" id="nox" name="nox" min="0.0" step="any">
+
+            <label for="rm">average number of rooms per dwelling</label>
+            <input type="number" id="rm" name="rm" min="0.0" step="any">
+
+            <label for="age">proportion of owner-occupied units built prior to 1940</label>
+            <input type="number" id="age" name="age" min="0.0" step="any">
+
+            <label for="dis">weighted distances to five Boston employment centres</label>
+            <input type="number" id="dis" name="dis" min="0.0" step="any">
+
+            <label for="tax">full-value property-tax rate per $10,000</label>
+            <input type="number" id="tax" name="tax" min="0.0" step="any">
+
+            <label for="ptratio">pupil-teacher ratio by town</label>
+            <input type="number" id="ptratio" name="ptratio" min="0.0" step="any">
+
+            <label for="b"> proportion of blacks by town</label>
+            <input type="number" id="b" name="b" min="0.0" step="any">
+
+            <label for="lstat">% lower status of the population</label>
+            <input type="number" id="lstat" name="lstat" min="0.0" step="any">
+
+
+            
+
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+
+    <div style='color:red;font-size:40px;margin: 0 auto;'>
+        {{result}}
+</div>
+
+
+</html>
+
+
